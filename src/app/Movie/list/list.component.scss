@@ -1,0 +1,35 @@
+li {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2D294B;
+    color: #b8b8b8;
+    border-bottom: 1px solid #b8b8b8;
+    padding: 0;
+}
+
+h5 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+ul.list-group-flush {
+    padding-top: 5px;
+    margin: 0;
+}
+
+li:hover {
+    color: white;
+}
+
+.btn {
+    margin: 10px;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+}

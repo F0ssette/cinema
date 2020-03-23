@@ -1,1 +1,15 @@
-<p>list works!</p>
+<div class="container">
+
+    <h5>Liste des Genres</h5>
+
+    <div class="genre">
+
+        <ul *ngFor="let gender of genders" class="list-group-flush">
+            <li class="list-group-item">{{ gender.name }}</li>
+        </ul>
+    </div>
+
+    <div class="bouton">
+        <button class="btn btn-dark"><a href="gender/new"> Ajouter un Genre </a></button>
+    </div>
+</div>

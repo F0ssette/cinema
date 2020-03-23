@@ -1,1 +1,20 @@
-<p>Ici s'affichera la liste des acteurs</p>
+<div class="container">
+
+    <h5>Liste des acteurs</h5>
+
+    <div class="actors">
+
+        <ul *ngFor="let actor of actors" class="list-group-flush">
+            <li class="list-group-item">
+                <p>{{ actor.firstname }} {{ actor.name }}</p>
+                <p>{{ actor.nationality }}</p>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="bouton">
+        <button class="btn btn-dark"><a href="actor/new"> Ajouter un Acteur </a></button>
+    </div>
+    
+</div>

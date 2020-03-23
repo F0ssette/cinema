@@ -1,1 +1,53 @@
-<p>add works!</p>
+<div class="container">
+
+    <h1>Ajouter un Film</h1>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="title">Titre</label>
+            <input type="text" name="title" formControlName="title" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" name="description" formControlName="description" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="year">Date de Sortie</label>
+            <input type="date" name="year" formControlName="year" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="picture">Photo</label>
+            <input type="text" name="picture" formControlName="picture" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="note">Note</label>
+            <select name="note" formControlName="note" class="form-control">
+                <option selected>Choose...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="bouton">
+            <button type="submit" class="btn btn-dark">Sauvegarder</button> <button class="btn btn-dark"><a
+                    href="movie">Retour</a></button>
+        </div>
+
+        <div class="form-group">
+            <label for="actor">Actor</label>
+            <select name="actor" formControlName="actor" class="form-control">
+                <option selected>Choose...</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+
+    </form>
+</div>

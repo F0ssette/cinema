@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpClientModule } from '@angular/common/http';
 import { throwError as observableThrowError, Observable } from 'rxjs';
 import { map, tap, catchError } from 'rxjs/operators';
+import { ActorModel as Actor} from './../models/actor.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,18 +11,25 @@ export class ActorService {
 
   constructor(private http: HttpClient) { }
 
-  
-  getActors(): Observable<any>{
+  getActors(): Observable<any> {
 
     return this.http.get('http://127.0.0.1:8000/actor').pipe(
       tap(data => {
         console.log(data);
       }),
       catchError(this.handleError('getActors', []))
-      )
-
+    )
   }
 
+  addActor(actor: Actor): Observable <any> {
+    return this.http.post<Actor>('http://127.0.0.1:8000/actor/new', actor).pipe(
+      tap(data => {
+        console.log(data);
+      }),
+      catchError(this.handleError('addActor', []))
+    )
+  }
+  
   /**
  * Handle Http operation that failed.
  * Let the app continue.

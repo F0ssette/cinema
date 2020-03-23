@@ -1,1 +1,18 @@
-<p>list works!</p>
+<div class="container">
+
+    <div class="movies">
+
+        <h5>Liste de films</h5>
+        <ul *ngFor="let movie of movies" class="list-group-flush">
+            <li class="list-group-item">
+                <p>{{ movie.title }}</p>
+                <p>{{ movie.note }}</p>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="bouton">
+        <button class="btn btn-dark"><a href="movie/new"> Ajouter un Film </a></button>
+    </div>
+</div>

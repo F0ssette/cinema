@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    background-color: #151137;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+    background-color: #2D294B;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    padding: 0;
+}
