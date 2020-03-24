@@ -6,3 +6,13 @@
     display: flex;
     justify-content: center;
 }
+
+.acteurs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+}
+
+.acteur {
+    margin: 10px;
+}

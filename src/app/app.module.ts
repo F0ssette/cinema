@@ -2,6 +2,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { LoginComponent } from './User/login/login.component';
 import { RegisterComponent } from './User/register/register.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ActorchartComponent } from './Chart/actorchart/actorchart.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +37,15 @@ import { NavbarComponent } from './navbar/navbar.component';
     Dashboard,
     LoginComponent,
     RegisterComponent,
-    NavbarComponent
+    NavbarComponent,
+    ActorchartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ChartsModule,
     AppRoutingModule
   ],
   providers: [

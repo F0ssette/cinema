@@ -21,6 +21,7 @@ export class ActorService {
     )
   }
 
+
   addActor(actor: Actor): Observable <any> {
     return this.http.post<Actor>('http://127.0.0.1:8000/actor/new', actor).pipe(
       tap(data => {

@@ -24,7 +24,7 @@ export class AddComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): any {
     this.getActor();
     this.getGender();
     this.form = new FormGroup({
@@ -33,8 +33,8 @@ export class AddComponent implements OnInit {
       year: new FormControl('', Validators.compose([])),
       picture: new FormControl('', Validators.compose([])),
       note: new FormControl('', Validators.compose([])),
-      gender: new FormControl('', Validators.compose([])),
-      actor: new FormControl('', Validators.compose([])),
+      gender: new FormControl(this.getGender()),
+      actor: new FormControl(this.getActor()),
     })
   }
 

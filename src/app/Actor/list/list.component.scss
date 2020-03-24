@@ -33,4 +33,16 @@ li:hover {
 .bouton {
     display: flex;
     justify-content: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.actors {
+    width: 48%;
+    margin: 5px;
 }

@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 
   actors = [];
+  actress = [];
+  acteur =[];
 
   constructor(
     private actorService: ActorService
@@ -20,8 +22,11 @@ export class ListComponent implements OnInit {
 
   getActor() {
     this.actorService.getActors()
-    .subscribe(data => {
-      this.actors = data;
+    .subscribe(actor => {
+      this.actors = actor;
+      this.actress = actor.filter(actor => actor.gender === true);
+      this.acteur = actor.filter(actor => actor.gender !== true);
     })
   }
+
 }
